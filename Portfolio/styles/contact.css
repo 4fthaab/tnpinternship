@@ -30,12 +30,15 @@ textarea {
     padding: 6px;
     border: 1px solid #ccc;
     resize: none;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus,
 textarea:focus {
     border-color: #0077b5;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(0,119,181,0.15);
 }
 
 input[type="email"] {
@@ -68,6 +71,7 @@ input[type="email"] {
 
 .btn:hover {
     opacity: 0.85;
+    transform: translateY(-2px);
 }
 
 .contact-info {

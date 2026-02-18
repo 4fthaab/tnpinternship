@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Position – Complete Showcase</title>
+
+<style>
+body{font-family:Arial;padding:20px}
+
+.container{
+  position:relative;
+  height:200px;
+  border:2px dashed gray;
+  margin-bottom:40px;
+}
+
+.box{
+  width:120px;
+  padding:10px;
+  border:1px solid black;
+  background:#86efac;
+}
+
+.static{position:static}
+.relative{position:relative;top:20px;left:20px}
+.absolute{position:absolute;top:20px;right:20px}
+.fixed{position:fixed;bottom:10px;right:10px;background:#fca5a5}
+.sticky{position:sticky;top:0;background:#fde047;padding:10px}
+
+.z1{position:absolute;top:40px;left:40px;background:#93c5fd;z-index:1}
+.z10{position:absolute;top:60px;left:60px;background:#fca5a5;z-index:10}
+.zminus{position:absolute;top:80px;left:80px;background:#bbf7d0;z-index:-1}
+</style>
+</head>
+
+<body>
+
+<h1>CSS position property – All values</h1>
+
+<h2>position: static</h2>
+<div class="container">
+  <div class="box static">static</div>
+</div>
+
+<h2>position: relative</h2>
+<div class="container">
+  <div class="box relative">relative</div>
+</div>
+
+<h2>position: absolute</h2>
+<div class="container">
+  <div class="box absolute">absolute</div>
+</div>
+
+<h2>position: sticky</h2>
+<div class="sticky">Sticky header</div>
+<p style="height:600px">Scroll to see sticky effect</p>
+
+<h2>position: fixed</h2>
+<div class="box fixed">fixed</div>
+
+<h2>z-index stacking</h2>
+<div class="container">
+  <div class="box z1">z-index 1</div>
+  <div class="box z10">z-index 10</div>
+  <div class="box zminus">z-index -1</div>
+</div>
+
+</body>
+</html>

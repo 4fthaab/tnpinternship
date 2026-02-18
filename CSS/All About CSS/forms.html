@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Forms – Complete Showcase</title>
+<style>
+body{font-family:Arial;padding:20px}
+
+input,select,textarea,button{
+  padding:8px;
+  margin:6px 0;
+  display:block;
+}
+
+input:focus{border:2px solid blue;outline:none}
+input:disabled{background:#e5e7eb}
+input:checked{outline:2px solid green}
+input::placeholder{color:gray}
+input:required{border:2px solid red}
+
+.custom-checkbox{accent-color:green}
+.custom-radio{accent-color:purple}
+
+fieldset{margin-top:20px;padding:10px}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.range{accent-color:orange}
+</style>
+</head>
+
+<body>
+
+<h1>CSS Forms – Full Styling Reference</h1>
+
+<h2>Input types</h2>
+<input type="text" placeholder="text">
+<input type="password" placeholder="password">
+<input type="email" placeholder="email">
+<input type="number" placeholder="number">
+<input type="date">
+<input type="file">
+<input type="color">
+<input type="range" class="range">
+
+<textarea placeholder="textarea"></textarea>
+
+<select>
+  <option>Select</option>
+  <option>A</option>
+  <option>B</option>
+</select>
+
+<h2>Checkbox & Radio</h2>
+<input type="checkbox" checked class="custom-checkbox"> Checkbox
+<input type="radio" checked class="custom-radio"> Radio
+
+<h2>States</h2>
+<input disabled placeholder="disabled">
+<input required placeholder="required">
+
+<h2>Buttons</h2>
+<button>Normal</button>
+<button disabled>Disabled</button>
+
+<h2>Form layout (grid)</h2>
+<div class="form-grid">
+  <input placeholder="First name">
+  <input placeholder="Last name">
+  <input placeholder="Email">
+  <input placeholder="Phone">
+</div>
+
+<fieldset>
+  <legend>Fieldset</legend>
+  <input placeholder="Inside fieldset">
+</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Dropdowns – Complete Showcase</title>
+<style>
+body{font-family:Arial;padding:20px}
+
+/* Base */
+.dropdown{
+  position:relative;
+  display:inline-block;
+  margin-right:40px;
+}
+
+.btn{
+  padding:10px;
+  background:#2563eb;
+  color:white;
+  border:none;
+}
+
+.menu{
+  display:none;
+  position:absolute;
+  background:#f9fafb;
+  min-width:150px;
+  border:1px solid #ccc;
+}
+
+.menu a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:black;
+}
+
+.menu a:hover{background:#e5e7eb}
+
+.hover:hover .menu{display:block}
+
+.focus:focus-within .menu{display:block}
+
+.submenu{
+  position:relative;
+}
+.submenu-content{
+  display:none;
+  position:absolute;
+  left:100%;
+  top:0;
+  background:#f1f5f9;
+  border:1px solid #ccc;
+}
+.submenu:hover .submenu-content{display:block}
+</style>
+</head>
+
+<body>
+
+<h1>Dropdown Variations</h1>
+
+<h2>Hover dropdown</h2>
+<div class="dropdown hover">
+  <button class="btn">Hover</button>
+  <div class="menu">
+    <a href="#">Option 1</a>
+    <a href="#">Option 2</a>
+  </div>
+</div>
+
+<h2>Focus dropdown</h2>
+<div class="dropdown focus">
+  <button class="btn">Focus</button>
+  <div class="menu">
+    <a href="#">Item A</a>
+    <a href="#">Item B</a>
+  </div>
+</div>
+
+<h2>Multi-level dropdown</h2>
+<div class="dropdown hover">
+  <button class="btn">Menu</button>
+  <div class="menu">
+    <div class="submenu">
+      <a href="#">Products ▶</a>
+      <div class="submenu-content">
+        <a href="#">Phones</a>
+        <a href="#">Laptops</a>
+      </div>
+    </div>
+    <a href="#">About</a>
+  </div>
+</div>
+
+</body>
+</html>

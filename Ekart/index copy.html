@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKart&trade;</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <section class="bg-blue-300 sticky top-0 z-50 flex justify-center items-center">
+        <div class="flex justify-between px-6 py-3 items-center max-w-6xl mx-auto w-full">
+            <span class="text-sm font-medium">Hi! User</span>
+            <a href="#" class="sm:ml-[20%] flex w-28 hover:scale-105 transition-transform duration-300"><img src="./assets/logo-wide.png" alt="logo"
+                    id="logo" /></a>
+            <span class="hidden sm:flex gap-4 text-sm">
+                <a href="#" class="hover:text-blue-600 transition-colors duration-200">Daily Deals</a>
+                <a href="#" class="hover:text-blue-600 transition-colors duration-200">Gift Cards</a>
+                <a href="#" class="hover:text-blue-600 transition-colors duration-200 ">Help & Contact</a>
+                <a href="#" class="hover:text-blue-600 transition-colors duration-200"><i class="fa-solid fa-user"></i></a>
+            </span>
+            <div id="mobile-menu-toggle" class="sm:hidden text-2xl cursor-pointer"><i class="fa fa-bars"></i></div>
+        </div>
+        <div id="mobileMenu" class="hidden flex justify-evenly items-center max-w-6xl mx-auto w-full mt-[20px]">
+            <a href="#" class="text-sm">Daily Deals</a>
+            <a href="#" class="text-sm">Gift Cards</a>
+            <a href="#" class="text-sm">Help & Contact</a>
+        </div>
+    </section>
+    <section class="flex justify-center gap-4 py-4 max-w-6xl mx-auto w-full sm:gap-2">
+        <span class="flex gap-4 text-sm">
+            <a href="#">All Categories</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#fashion">Fashion</a>
+            <a href="#groceries">Groceries</a>
+            <a href="#home-kitchen">Home & Kitchen</a>
+            <a href="#beauty">Beauty</a>
+            <a href="#">All Categories</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#fashion">Fashion</a>
+            <a href="#groceries">Groceries</a>
+            <a href="#home-kitchen">Home & Kitchen</a>
+            <a href="#beauty">Beauty</a>
+        </span>
+    </section>
+
+    <!-- <div class="section-block">
+        <h2 class="section-heading">Electronics</h2>
+        <section class="category-section" id="electronics">
+            <div class="category-item">
+                <a href="laptops.html" class="category-icon-btn">
+                    <i class="fa-solid fa-laptop"></i>
+                </a>
+                <p>Laptops</p>
+            </div>
+            <div class="category-item">
+                <a href="mobiles.html" class="category-icon-btn">
+                    <i class="fa-solid fa-mobile"></i>
+                </a>
+                <p>Mobiles</p>
+            </div>
+            <div class="category-item">
+                <a href="cameras.html" class="category-icon-btn">
+                    <i class="fa-solid fa-camera"></i>
+                </a>
+                <p>Cameras</p>
+            </div>
+            <div class="category-item">
+                <a href="smartwatches.html" class="category-icon-btn">
+                    <i class="fa-solid fa-person-running"></i>
+                </a>
+                <p>Smart Watches</p>
+            </div>
+            <div class="category-item">
+                <a href="headphones.html" class="category-icon-btn">
+                    <i class="fa-solid fa-headphones"></i>
+                </a>
+                <p>Headphones</p>
+            </div>
+        </section> -->
+    </div>
+
+</body>
+
+<script>
+    const menuBtn = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+
+</html>

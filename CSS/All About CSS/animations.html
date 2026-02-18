@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animations – Complete Showcase</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(200px)
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        background: red
+      }
+
+      50% {
+        background: yellow
+      }
+
+      100% {
+        background: green
+      }
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      background: #34d399;
+      margin: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+    }
+
+    /* properties */
+    .basic {
+      animation-name: move;
+      animation-duration: 2s;
+    }
+
+    .infinite {
+      animation-iteration-count: infinite
+    }
+
+    .alternate {
+      animation-direction: alternate
+    }
+
+    .reverse {
+      animation-direction: reverse
+    }
+
+    .linear {
+      animation-timing-function: linear
+    }
+
+    .ease {
+      animation-timing-function: ease
+    }
+
+    .delay {
+      animation-delay: 1s
+    }
+
+    .fill {
+      animation-fill-mode: forwards
+    }
+
+    .pause {
+      animation-play-state: paused
+    }
+
+    .multi {
+      animation: colorChange 3s infinite linear;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Animations – All Properties</h1>
+
+  <div class="box basic">basic</div>
+  <div class="box basic infinite">infinite</div>
+  <div class="box basic alternate infinite">alternate</div>
+  <div class="box basic reverse infinite">reverse</div>
+  <div class="box basic linear infinite">linear</div>
+  <div class="box basic ease infinite">ease</div>
+  <div class="box basic delay infinite">delay</div>
+  <div class="box basic fill">fill</div>
+
+  <h2>Paused animation</h2>
+  <div class="box basic infinite pause">paused</div>
+
+  <h2>Multiple keyframes</h2>
+  <div class="box multi">color</div>
+
+</body>
+
+</html>

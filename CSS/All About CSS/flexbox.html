@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Flexbox – Complete Showcase</title>
+<style>
+body{font-family:Arial;padding:20px}
+section{margin-bottom:40px}
+
+.container{
+  display:flex;
+  border:2px solid black;
+  padding:10px;
+  margin-top:10px;
+  height:120px;
+}
+
+.box{
+  background:#93c5fd;
+  padding:10px;
+  margin:5px;
+  width:60px;
+  text-align:center;
+}
+
+/* justify-content */
+.jc-start{justify-content:flex-start}
+.jc-center{justify-content:center}
+.jc-end{justify-content:flex-end}
+.jc-between{justify-content:space-between}
+.jc-around{justify-content:space-around}
+.jc-evenly{justify-content:space-evenly}
+
+/* align-items */
+.ai-start{align-items:flex-start}
+.ai-center{align-items:center}
+.ai-end{align-items:flex-end}
+.ai-stretch{align-items:stretch}
+.ai-baseline{align-items:baseline}
+
+/* direction */
+.row{flex-direction:row}
+.column{flex-direction:column}
+.row-rev{flex-direction:row-reverse}
+
+/* wrap */
+.wrap{flex-wrap:wrap}
+.nowrap{flex-wrap:nowrap}
+
+/* gap */
+.gap{gap:20px}
+
+/* items */
+.order2{order:2}
+.grow1{flex-grow:1}
+.grow2{flex-grow:2}
+.shrink0{flex-shrink:0}
+.basis{flex-basis:120px}
+.self-end{align-self:flex-end}
+</style>
+</head>
+
+<body>
+
+<h1>Flexbox – Complete Reference</h1>
+
+<section>
+<h2>justify-content</h2>
+<div class="container jc-start"><div class="box">A</div><div class="box">B</div></div>
+<div class="container jc-center"><div class="box">A</div><div class="box">B</div></div>
+<div class="container jc-end"><div class="box">A</div><div class="box">B</div></div>
+<div class="container jc-between"><div class="box">A</div><div class="box">B</div></div>
+<div class="container jc-around"><div class="box">A</div><div class="box">B</div></div>
+<div class="container jc-evenly"><div class="box">A</div><div class="box">B</div></div>
+</section>
+
+<section>
+<h2>align-items</h2>
+<div class="container ai-start"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
+<div class="container ai-center"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
+<div class="container ai-end"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
+<div class="container ai-baseline"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
+</section>
+
+<section>
+<h2>flex-direction</h2>
+<div class="container row"><div class="box">1</div><div class="box">2</div></div>
+<div class="container column"><div class="box">1</div><div class="box">2</div></div>
+<div class="container row-rev"><div class="box">1</div><div class="box">2</div></div>
+</section>
+
+<section>
+<h2>flex-wrap & gap</h2>
+<div class="container wrap gap">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div><div class="box">4</div>
+</div>
+</section>
+
+<section>
+<h2>Flex items</h2>
+<div class="container">
+  <div class="box order2">order 2</div>
+  <div class="box">order 0</div>
+</div>
+
+<div class="container">
+  <div class="box grow1">grow 1</div>
+  <div class="box grow2">grow 2</div>
+</div>
+
+<div class="container">
+  <div class="box basis">basis 120px</div>
+  <div class="box self-end">self-end</div>
+</div>
+</section>
+
+</body>
+</html>

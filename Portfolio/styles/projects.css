@@ -7,16 +7,13 @@
 
 
 .project-card {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    position: relative;
-    
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .project-card:hover {
-    background-color: #f1f1f1;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
 .project-image {
@@ -31,7 +28,6 @@
     margin-top: 6px;
 }
 
-/* Text */
 .project-description {
     margin: 10px 0;
 }

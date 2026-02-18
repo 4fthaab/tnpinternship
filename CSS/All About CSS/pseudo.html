@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pseudo Classes & Elements – Complete Showcase</title>
+<style>
+body{font-family:Arial;padding:20px}
+
+/* Links */
+a:link{color:blue}
+a:visited{color:purple}
+a:hover{color:red}
+a:active{color:green}
+
+/* Form states */
+input:focus{border:2px solid blue;outline:none}
+input:disabled{background:#ddd}
+input:checked{outline:2px solid green}
+input:required{border:2px solid orange}
+
+/* Structural */
+li:first-child{color:green}
+li:last-child{color:red}
+li:nth-child(2){font-weight:bold}
+p:not(.skip){background:#fde68a}
+div:empty{height:20px;background:#fecaca}
+
+/* Root & target */
+:root{scroll-behavior:smooth}
+#target:target{background:#86efac;padding:10px}
+
+/* Pseudo elements */
+p::first-letter{font-size:32px}
+p::first-line{font-weight:bold}
+p::selection{background:yellow;color:black}
+li::marker{color:red}
+.box::before{content:"Before ";color:blue}
+.box::after{content:" After";color:green}
+
+input::placeholder{color:gray}
+</style>
+</head>
+
+<body>
+
+<h1>Pseudo Classes & Elements – Full Reference</h1>
+
+<h2>Link states</h2>
+<a href="#target">Test link</a>
+
+<h2>Form states</h2>
+<input placeholder="Focus me"><br><br>
+<input disabled placeholder="Disabled"><br><br>
+<input type="checkbox" checked> Checked<br><br>
+<input required placeholder="Required">
+
+<h2>Structural pseudo-classes</h2>
+<ul>
+  <li>First</li>
+  <li>Second</li>
+  <li>Last</li>
+</ul>
+
+<p>Styled by :not()</p>
+<p class="skip">Skipped</p>
+
+<div></div>
+
+<h2>:target</h2>
+<a href="#target">Go to target</a>
+<div style="height:300px"></div>
+<div id="target">Target element</div>
+
+<h2>Pseudo-elements</h2>
+<p>This paragraph demonstrates pseudo elements.</p>
+
+<div class="box">Content</div>
+
+</body>
+</html>

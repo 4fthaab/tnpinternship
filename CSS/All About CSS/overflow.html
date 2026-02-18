@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Overflow – Complete Showcase</title>
+
+<style>
+body{font-family:Arial;padding:20px}
+
+.box{
+  width:200px;
+  height:80px;
+  border:2px solid black;
+  margin-bottom:20px;
+}
+
+.content{
+  width:350px;
+}
+
+.visible{overflow:visible}
+.hidden{overflow:hidden}
+.scroll{overflow:scroll}
+.auto{overflow:auto}
+.clip{overflow:clip}
+
+.x-hidden{overflow-x:hidden;overflow-y:scroll}
+.ellipsis{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  width:200px;
+  border:1px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CSS overflow property – All values</h1>
+
+<h2>overflow: visible</h2>
+<div class="box visible">
+  <div class="content">Visible overflow content</div>
+</div>
+
+<h2>overflow: hidden</h2>
+<div class="box hidden">
+  <div class="content">Hidden overflow content</div>
+</div>
+
+<h2>overflow: scroll</h2>
+<div class="box scroll">
+  <div class="content">Scroll overflow content</div>
+</div>
+
+<h2>overflow: auto</h2>
+<div class="box auto">
+  <div class="content">Auto overflow content</div>
+</div>
+
+<h2>overflow: clip</h2>
+<div class="box clip">
+  <div class="content">Clipped content</div>
+</div>
+
+<h2>overflow-x / overflow-y</h2>
+<div class="box x-hidden">
+  <div class="content">Horizontal hidden, vertical scroll</div>
+</div>
+
+<h2>text-overflow: ellipsis</h2>
+<div class="ellipsis">
+This is a very long sentence that will be cut with dots
+</div>
+
+</body>
+</html>

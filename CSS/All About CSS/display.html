@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display – Complete Showcase</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px
+    }
+
+    section {
+      margin-bottom: 40px
+    }
+
+    .box {
+      background: #93c5fd;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #333;
+    }
+
+    .inline {
+      display: inline
+    }
+
+    .block {
+      display: block
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 120px
+    }
+
+    .none {
+      display: none
+    }
+
+    .contents {
+      display: contents
+    }
+
+    .flex {
+      display: flex;
+      gap: 10px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
+
+    .table {
+      display: table;
+      border: 2px solid black
+    }
+
+    .table-row {
+      display: table-row
+    }
+
+    .table-cell {
+      display: table-cell;
+      border: 1px solid black;
+      padding: 5px
+    }
+
+    .hidden {
+      visibility: hidden
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS display property – All major values</h1>
+
+  <section>
+    <h2>display: inline</h2>
+    <div class="box inline">inline 1</div>
+    <div class="box inline">inline 2</div>
+  </section>
+
+  <section>
+    <h2>display: block</h2>
+    <div class="box block">block</div>
+  </section>
+
+  <section>
+    <h2>display: inline-block</h2>
+    <div class="box inline-block">box</div>
+    <div class="box inline-block">box</div>
+  </section>
+
+  <section>
+    <h2>display: none</h2>
+    <div class="box none">not visible</div>
+    <p>Element removed from layout</p>
+  </section>
+
+  <section>
+    <h2>display: contents</h2>
+    <div class="box contents">
+      <span>child 1</span>
+      <span>child 2</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>display: flex</h2>
+    <div class="flex box">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>display: grid</h2>
+    <div class="grid">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>display: table</h2>
+    <div class="table">
+      <div class="table-row">
+        <div class="table-cell">A</div>
+        <div class="table-cell">B</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>visibility: hidden vs display:none</h2>
+    <div class="box hidden">Hidden but space remains</div>
+    <div class="box">Next element</div>
+  </section>
+
+</body>
+
+</html>
