@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+  font-family: Arial;
+}
+
+#game {
+  width: 400px;
+  height: 400px;
+  background: rgb(182, 231, 214);
+  margin: 20px auto;
+  position: relative;
+  border: 3px solid gray;
+}
+#score-card {
+    margin: auto;
+    width: 250px;
+    border:2px solid rgb(45, 194, 205);
+}
+
+#score-card:hover {
+    background-color: rgb(131, 130, 130);
+    color: white;
+    border:2px solid rgb(94, 8, 8);
+}
+
+.snake {
+  width: 20px;
+  height: 20px;
+  background: lime;
+  position: absolute;
+}
+
+.food {
+  width: 20px;
+  height: 20px; 
+  background: red;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  #game {
+    width: 300px;
+    height: 300px;
+  }
+}
