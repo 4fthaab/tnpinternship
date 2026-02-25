@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Transform – Complete Showcase</title>
-<style>
-body{font-family:Arial;padding:20px}
+  <meta charset="UTF-8">
+  <title>CSS Transform – Complete Showcase</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px
+    }
 
-.box{
-  width:120px;
-  height:120px;
-  background:#a5b4fc;
-  margin:20px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-}
+    .box {
+      width: 120px;
+      height: 120px;
+      background: #a5b4fc;
+      margin: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.translate{transform:translate(30px,20px)}
-.translateX{transform:translateX(40px)}
-.translateY{transform:translateY(40px)}
-.scale{transform:scale(1.4)}
-.scaleX{transform:scaleX(1.5)}
-.rotate{transform:rotate(30deg)}
-.rotateX{transform:rotateX(50deg)}
-.skew{transform:skew(20deg,10deg)}
+    .translate:hover {
+      transform: translate(30px, 20px)
+    }
 
-.origin{
-  transform:rotate(30deg);
-  transform-origin:top left;
-}
+    .translateX:hover {
+      transform: translateX(40px)
+    }
 
-.perspective{
-  transform:perspective(300px) rotateY(45deg);
-}
-</style>
+    .translateY:hover {
+      transform: translateY(40px)
+    }
+
+    .scale:hover {
+      transform: scale(1.4)
+    }
+
+    .scaleX:hover {
+      transform: scaleX(1.5)
+    }
+
+    .rotate:hover {
+      transform: rotate(30deg)
+    }
+
+    .rotateX:hover {
+      transform: rotateX(50deg)
+    }
+
+    .skew:hover {
+      transform: skew(20deg, 10deg)
+    }
+
+    .origin:hover {
+      transform: rotate(30deg);
+      transform-origin: top left;
+    }
+
+    .perspective:hover:hover {
+      transform: perspective(300px) rotateY(45deg);
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS transform – All major functions</h1>
+  <h1>CSS transform</h1>
 
-<div class="box translate">translate</div>
-<div class="box translateX">translateX</div>
-<div class="box translateY">translateY</div>
-<div class="box scale">scale</div>
-<div class="box scaleX">scaleX</div>
-<div class="box rotate">rotate</div>
-<div class="box rotateX">rotateX</div>
-<div class="box skew">skew</div>
-<div class="box origin">origin</div>
-<div class="box perspective">3D</div>
+  <div class="box translate">translate</div>
+  <div class="box translateX">translateX</div>
+  <div class="box translateY">translateY</div>
+  <div class="box scale">scale</div>
+  <div class="box scaleX">scaleX</div>
+  <div class="box rotate">rotate</div>
+  <div class="box rotateX">rotateX</div>
+  <div class="box skew">skew</div>
+  <div class="box origin">origin</div>
+  <div class="box perspective">3D</div>
 
 </body>
+
 </html>

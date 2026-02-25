@@ -1,197 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Basics Showcase</title>
+  <meta charset="UTF-8">
+  <title>CSS Basics Showcase</title>
 
-<style>
-body{
-  font-family: Arial, sans-serif;
-  padding:20px;
-  line-height:1.6;
-}
-section{margin-bottom:50px;}
-.demo-box{
-  padding:12px;
-  margin:8px 0;
-  color:#fff;
-}
-.label{
-  font-size:13px;
-  color:#333;
-  margin-top:5px;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-/* ================= SELECTORS ================= */
+    section {
+      margin-bottom: 50px;
+    }
 
-p{color:teal;}
-.class-demo{color:blue;}
-#id-demo{color:crimson;}
-*{box-sizing:border-box;}
+    .demo-box {
+      padding: 12px;
+      margin: 8px 0;
+      color: #fff;
+    }
 
-input[type]{border:2px solid #333;}
-input[type="email"]{border-color:green;}
-input[type^="t"]{background:#e0f2fe;}
-input[type$="t"]{color:red;}
-input[type*="e"]{background:#fde68a;}
-input[data-role~="admin"]{border:3px dashed purple;}
-input[lang|="en"]{background:#bbf7d0;}
+    .label {
+      font-size: 13px;
+      color: #333;
+      margin-top: 5px;
+    }
 
-/* ================= COLORS ================= */
+    p {
+      color: teal;
+    }
 
-.color-name{background:orange;}
-.color-hex{background:#2563eb;}
-.color-rgb{background:rgb(34,197,94);}
-.color-rgba{background:rgba(239,68,68,.6);}
-.color-hsl{background:hsl(262,83%,58%);}
-.color-hsla{background:hsla(210,90%,50%,0.6);}
-.color-current{color:#7c3aed;background:currentColor;}
-.color-transparent{background:transparent;color:black;border:1px solid black;}
+    .class-demo {
+      color: blue;
+    }
 
-/* ================= BACKGROUNDS ================= */
+    #id-demo {
+      color: crimson;
+    }
 
-.bg-repeat{background:url('https://picsum.photos/50');}
-.bg-no-repeat{background:url('https://picsum.photos/50') no-repeat;}
-.bg-cover{background:url('https://picsum.photos/300') center/cover;}
-.bg-contain{background:url('https://picsum.photos/300') center/contain no-repeat;}
-.bg-fixed{background:url('https://picsum.photos/300') fixed;}
-.bg-gradient{background:linear-gradient(to right,#60a5fa,#34d399);}
-.bg-radial{background:radial-gradient(circle,red,yellow,green);}
+    * {
+      box-sizing: border-box;
+    }
 
-/* ================= BOX MODEL ================= */
+    input[type] {
+      border: 2px solid #333;
+    }
 
-.border-solid{border:4px solid black;}
-.border-dotted{border:4px dotted black;}
-.border-dashed{border:4px dashed black;}
-.border-double{border:6px double black;}
-.border-radius{border-radius:20px;border:3px solid #000;}
+    input[type="email"] {
+      border-color: green;
+    }
 
-.margin-demo{margin:30px;background:#e5e7eb;color:black;}
-.padding-demo{padding:30px;background:#93c5fd;color:black;}
-.negative-margin{margin-left:-30px;background:#fecaca;color:black;}
+    input[type^="t"] {
+      background: #e0f2fe;
+    }
 
-/* ================= TEXT & FONTS ================= */
+    input[type$="t"] {
+      color: red;
+    }
 
-.font-serif{font-family:serif;}
-.font-mono{font-family:monospace;}
-.font-em{font-size:1.5em;}
-.font-rem{font-size:1.5rem;}
-.font-bold{font-weight:800;}
-.font-italic{font-style:italic;}
-.text-center{text-align:center;}
-.text-justify{text-align:justify;}
-.text-upper{text-transform:uppercase;}
-.text-shadow{text-shadow:2px 2px 5px black;}
-.letter-space{letter-spacing:4px;}
-.word-space{word-spacing:10px;}
-.white-nowrap{white-space:nowrap;border:1px solid #333;}
+    input[type*="e"] {
+      background: #fde68a;
+    }
 
-/* ================= SIZES ================= */
+    input[data-role~="admin"] {
+      border: 3px dashed purple;
+    }
 
-.size-px{width:150px;height:60px;background:#93c5fd;}
-.size-percent{width:50%;background:#86efac;}
-.size-vw{width:30vw;background:#fcd34d;}
-.min-max{min-width:150px;max-width:300px;background:#a5b4fc;}
+    input[lang|="en"] {
+      background: #bbf7d0;
+    }
 
-/* ================= LINKS ================= */
 
-a:link{color:blue;}
-a:visited{color:purple;}
-a:hover{color:red;}
-a:active{color:green;}
-.btn-link{
-  display:inline-block;
-  padding:10px 15px;
-  background:#2563eb;
-  color:white;
-  text-decoration:none;
-  border-radius:5px;
-}
-</style>
+    .color-name {
+      background: orange;
+    }
+
+    .color-hex {
+      background: #2563eb;
+    }
+
+    .color-rgb {
+      background: rgb(34, 197, 94);
+    }
+
+    .color-rgba {
+      background: rgba(239, 68, 68, .6);
+    }
+
+    .color-hsl {
+      background: hsl(262, 83%, 58%);
+    }
+
+    .color-hsla {
+      background: hsla(210, 90%, 50%, 0.6);
+    }
+
+    .color-current {
+      color: #7c3aed;
+      background: currentColor;
+    }
+
+    .color-transparent {
+      background: transparent;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .bg-repeat {
+      background: url('https://picsum.photos/50');
+    }
+
+    .bg-no-repeat {
+      background: url('https://picsum.photos/50') no-repeat;
+    }
+
+    .bg-cover {
+      background: url('https://picsum.photos/300') center/cover;
+    }
+
+    .bg-contain {
+      background: url('https://picsum.photos/300') center/contain no-repeat;
+    }
+
+    .bg-fixed {
+      background: url('https://picsum.photos/300') fixed;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(to right, #60a5fa, #34d399);
+    }
+
+    .bg-radial {
+      background: radial-gradient(circle, red, yellow, green);
+    }
+
+    .border-solid {
+      border: 4px solid black;
+    }
+
+    .border-dotted {
+      border: 4px dotted black;
+    }
+
+    .border-dashed {
+      border: 4px dashed black;
+    }
+
+    .border-double {
+      border: 6px double black;
+    }
+
+    .border-radius {
+      border-radius: 20px;
+      border: 3px solid #000;
+    }
+
+    .margin-demo {
+      margin: 30px;
+      background: #e5e7eb;
+      color: black;
+    }
+
+    .padding-demo {
+      padding: 30px;
+      background: #93c5fd;
+      color: black;
+    }
+
+    .negative-margin {
+      margin-left: -30px;
+      background: #fecaca;
+      color: black;
+    }
+
+    .font-serif {
+      font-family: serif;
+    }
+
+    .font-mono {
+      font-family: monospace;
+    }
+
+    .font-em {
+      font-size: 1.5em;
+    }
+
+    .font-rem {
+      font-size: 1.5rem;
+    }
+
+    .font-bold {
+      font-weight: 800;
+    }
+
+    .font-italic {
+      font-style: italic;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .text-upper {
+      text-transform: uppercase;
+    }
+
+    .text-shadow {
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .letter-space {
+      letter-spacing: 4px;
+    }
+
+    .word-space {
+      word-spacing: 10px;
+    }
+
+    .white-nowrap {
+      white-space: nowrap;
+      border: 1px solid #333;
+    }
+
+    .size-px {
+      width: 150px;
+      height: 60px;
+      background: #93c5fd;
+    }
+
+    .size-percent {
+      width: 50%;
+      background: #86efac;
+    }
+
+    .size-vw {
+      width: 30vw;
+      background: #fcd34d;
+    }
+
+    .min-max {
+      min-width: 150px;
+      max-width: 300px;
+      background: #a5b4fc;
+    }
+
+
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS Basics – Complete Showcase</h1>
+  <h1>CSS Basics – Complete Showcase</h1>
 
-<section>
-<h2>Selectors</h2>
-<p>Element selector</p>
-<p class="class-demo">Class selector</p>
-<p id="id-demo">ID selector</p>
+  <section>
+    <h2>Selectors</h2>
+    <p>Element selector</p>
+    <p class="class-demo">Class selector</p>
+    <p id="id-demo">ID selector</p>
 
-<h3>Attribute selectors</h3>
-<input type="text" placeholder="type">
-<input type="email" placeholder="email">
-<input type="test" data-role="admin user" lang="en-us" placeholder="multiple attributes">
-</section>
+    <h3>Attribute selectors</h3>
+    <input type="text" placeholder="type">
+    <input type="email" placeholder="email">
+    <input type="test" data-role="admin user" lang="en-us" placeholder="multiple attributes">
+  </section>
 
-<section>
-<h2>Colors</h2>
-<div class="demo-box color-name">Named</div>
-<div class="demo-box color-hex">HEX</div>
-<div class="demo-box color-rgb">RGB</div>
-<div class="demo-box color-rgba">RGBA</div>
-<div class="demo-box color-hsl">HSL</div>
-<div class="demo-box color-hsla">HSLA</div>
-<div class="demo-box color-current">currentColor</div>
-<div class="demo-box color-transparent">transparent</div>
-</section>
+  <section>
+    <h2>Colors</h2>
+    <div class="demo-box color-name">Named</div>
+    <div class="demo-box color-hex">HEX</div>
+    <div class="demo-box color-rgb">RGB</div>
+    <div class="demo-box color-rgba">RGBA</div>
+    <div class="demo-box color-hsl">HSL</div>
+    <div class="demo-box color-hsla">HSLA</div>
+    <div class="demo-box color-current">currentColor</div>
+    <div class="demo-box color-transparent">transparent</div>
+  </section>
 
-<section>
-<h2>Backgrounds</h2>
-<div class="demo-box bg-repeat">repeat</div>
-<div class="demo-box bg-no-repeat">no-repeat</div>
-<div class="demo-box bg-cover">cover</div>
-<div class="demo-box bg-contain">contain</div>
-<div class="demo-box bg-fixed">fixed</div>
-<div class="demo-box bg-gradient">linear gradient</div>
-<div class="demo-box bg-radial">radial gradient</div>
-</section>
+  <section>
+    <h2>Backgrounds</h2>
+    <div class="demo-box bg-repeat">repeat</div>
+    <div class="demo-box bg-no-repeat">no-repeat</div>
+    <div class="demo-box bg-cover">cover</div>
+    <div class="demo-box bg-contain">contain</div>
+    <div class="demo-box bg-fixed">fixed</div>
+    <div class="demo-box bg-gradient">linear gradient</div>
+    <div class="demo-box bg-radial">radial gradient</div>
+  </section>
 
-<section>
-<h2>Box Model</h2>
-<div class="demo-box border-solid">solid</div>
-<div class="demo-box border-dotted">dotted</div>
-<div class="demo-box border-dashed">dashed</div>
-<div class="demo-box border-double">double</div>
-<div class="demo-box border-radius">radius</div>
+  <section>
+    <h2>Box Model</h2>
+    <div class="demo-box border-solid">solid</div>
+    <div class="demo-box border-dotted">dotted</div>
+    <div class="demo-box border-dashed">dashed</div>
+    <div class="demo-box border-double">double</div>
+    <div class="demo-box border-radius">radius</div>
 
-<div class="demo-box margin-demo">margin</div>
-<div class="demo-box padding-demo">padding</div>
-<div class="demo-box negative-margin">negative margin</div>
-</section>
+    <div class="demo-box margin-demo">margin</div>
+    <div class="demo-box padding-demo">padding</div>
+    <div class="demo-box negative-margin">negative margin</div>
+  </section>
 
-<section>
-<h2>Text & Fonts</h2>
-<p class="font-serif">Serif font</p>
-<p class="font-mono">Monospace font</p>
-<p class="font-em">Font size em</p>
-<p class="font-rem">Font size rem</p>
-<p class="font-bold">Bold text</p>
-<p class="font-italic">Italic text</p>
-<p class="text-center">Center aligned</p>
-<p class="text-justify">Justified paragraph text example showing spacing across width.</p>
-<p class="text-upper">uppercase</p>
-<p class="text-shadow">shadow text</p>
-<p class="letter-space">letter spacing</p>
-<p class="word-space">word spacing example</p>
-<div class="white-nowrap">This is a very long sentence that will not wrap into new line.</div>
-</section>
+  <section>
+    <h2>Text & Fonts</h2>
+    <p class="font-serif">Serif font</p>
+    <p class="font-mono">Monospace font</p>
+    <p class="font-em">Font size em</p>
+    <p class="font-rem">Font size rem</p>
+    <p class="font-bold">Bold text</p>
+    <p class="font-italic">Italic text</p>
+    <p class="text-center">Center aligned</p>
+    <p class="text-justify">Justified paragraph text example showing spacing across width.</p>
+    <p class="text-upper">uppercase</p>
+    <p class="text-shadow">shadow text</p>
+    <p class="letter-space">letter spacing</p>
+    <p class="word-space">word spacing example</p>
+    <div class="white-nowrap">This is a very long sentence that will not wrap into new line.</div>
+  </section>
 
-<section>
-<h2>Sizes</h2>
-<div class="demo-box size-px">px</div>
-<div class="demo-box size-percent">%</div>
-<div class="demo-box size-vw">vw</div>
-<div class="demo-box min-max">min / max width</div>
-</section>
+  <section>
+    <h2>Sizes</h2>
+    <div class="demo-box size-px">px</div>
+    <div class="demo-box size-percent">%</div>
+    <div class="demo-box size-vw">vw</div>
+    <div class="demo-box min-max">min / max width</div>
+  </section>
 
-<section>
-<h2>Links</h2>
-<a href="#">Normal link</a><br><br>
-<a class="btn-link" href="#">Button link</a>
-</section>
+  <section>
+    <h2>Links</h2>
+    <a href="#">Normal link</a><br><br>
+    <a class="btn-link" href="#">Button link</a>
+  </section>
 
 </body>
+
 </html>

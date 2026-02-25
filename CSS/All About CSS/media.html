@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Media Queries – Complete Showcase</title>
-<style>
-body{font-family:Arial;padding:20px}
+  <meta charset="UTF-8">
+  <title>CSS Media Queries – Complete Showcase</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px
+    }
 
-.box{
-  padding:20px;
-  background:#86efac;
-  margin-bottom:20px;
-}
+    .box {
+      padding: 20px;
+      background: #86efac;
+      margin-bottom: 20px;
+    }
 
-.layout{
-  display:flex;
-  gap:10px;
-}
+    .layout {
+      display: flex;
+      gap: 10px;
+    }
 
-.col{
-  flex:1;
-  padding:20px;
-  background:#93c5fd;
-}
+    .col {
+      flex: 1;
+      padding: 20px;
+      background: #93c5fd;
+    }
 
-/* width */
-@media (max-width:800px){
-  .box{background:#fcd34d}
-}
+    @media (max-width:800px) {
+      .box {
+        background: #fcd34d
+      }
+    }
 
-/* mobile */
-@media (max-width:500px){
-  .layout{flex-direction:column}
-  .box{background:#fca5a5}
-}
+    @media (max-width:500px) {
+      .layout {
+        flex-direction: column
+      }
 
-/* orientation */
-@media (orientation:landscape){
-  .box{border:5px solid blue}
-}
-</style>
+      .box {
+        background: #fca5a5
+      }
+    }
+
+    @media (orientation:landscape) {
+      .box {
+        border: 5px solid blue
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS Media Queries – Full Reference</h1>
+  <h1>CSS Media Queries – Full Reference</h1>
 
-<div class="box">
-Resize window / rotate screen / change theme
-</div>
+  <div class="box">
+    Resize window / rotate screen / change theme
+  </div>
 
-<h2>Responsive layout</h2>
-<div class="layout">
-  <div class="col">Column 1</div>
-  <div class="col">Column 2</div>
-  <div class="col">Column 3</div>
-</div>
-
-<ul>
-<li>max-width</li>
-<li>min-width</li>
-<li>orientation</li>
-<li>prefers-color-scheme</li>
-<li>responsive layouts</li>
-</ul>
+  <h2>Responsive layout</h2>
+  <div class="layout">
+    <div class="col">Column 1</div>
+    <div class="col">Column 2</div>
+    <div class="col">Column 3</div>
+  </div>
 
 </body>
+
 </html>

@@ -1,100 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Navbars – Complete Showcase</title>
-<style>
-body{margin:0;font-family:Arial}
+  <meta charset="UTF-8">
+  <title>CSS Navbars – Complete Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial
+    }
 
-/* Horizontal */
-.nav{
-  background:#111827;
-  padding:10px;
-}
-.nav a{
-  color:white;
-  text-decoration:none;
-  margin-right:15px;
-}
-.nav a:hover{text-decoration:underline}
+    .nav {
+      background: #111827;
+      padding: 10px;
+    }
 
-/* Vertical */
-.vertical{
-  width:200px;
-}
-.vertical a{
-  display:block;
-  margin:10px 0;
-}
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+    }
 
-/* Fixed */
-.fixed{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#2563eb;
-}
+    .nav a:hover {
+      text-decoration: underline
+    }
 
-/* Sticky */
-.sticky{
-  position:sticky;
-  top:0;
-  background:#16a34a;
-}
+    .vertical {
+      width: 200px;
+    }
 
-/* Responsive */
-.menu{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.menu a{
-  padding:8px 12px;
-  background:#1d4ed8;
-  color:white;
-}
-</style>
+    .vertical a {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #2563eb;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background: #16a34a;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Navbar Variations</h1>
+  <h1>Navbar Variations</h1>
 
-<h2>Horizontal</h2>
-<div class="nav">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</div>
+  <h2>Horizontal</h2>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
 
-<h2>Vertical</h2>
-<div class="nav vertical">
-  <a href="#">Dashboard</a>
-  <a href="#">Settings</a>
-  <a href="#">Logout</a>
-</div>
+  <h2>Vertical</h2>
+  <div class="nav vertical">
+    <a href="#">Dashboard</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+  </div>
 
-<h2>Fixed</h2>
-<div class="nav fixed">
-  <a href="#">Fixed Menu</a>
-</div>
+  <h2>Fixed</h2>
+  <div class="nav fixed">
+    <a href="#">Fixed Menu</a>
+  </div>
 
-<div style="height:80px"></div>
+  <div style="height:80px"></div>
 
-<h2>Sticky</h2>
-<div class="nav sticky">
-  <a href="#">Sticky Menu</a>
-</div>
+  <h2>Sticky</h2>
+  <div class="nav sticky">
+    <a href="#">Sticky Menu</a>
+  </div>
 
-<p style="height:500px">Scroll content</p>
+  <p style="height:550px">Scroll content</p>
 
-<h2>Responsive-style (flex)</h2>
-<div class="menu">
-  <a href="#">Home</a>
-  <a href="#">Products</a>
-  <a href="#">Services</a>
-  <a href="#">Contact</a>
-</div>
 
 </body>
+
 </html>

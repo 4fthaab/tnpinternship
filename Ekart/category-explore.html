@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUQ &bull; Mobiles</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo-square.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center">
+
+            <div class="flex items-center">
+                <a href="./index.html" class="w-28 hover:scale-105 transition">
+                    <img src="./assets/logo-wide.png" class="w-full">
+                </a>
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <div
+                    class="w-full max-w-lg flex items-center border border-gray-300 rounded-full px-4 py-2 shadow-sm md:mr-5">
+                    <i class="fa fa-search text-gray-500 mr-3"></i>
+                    <input type="text" class="w-full outline-none bg-transparent" placeholder="Search Mobiles">
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6 text-sm">
+
+                <div class="hidden md:flex gap-6">
+                    <a href="#" class="hover:text-blue-600">Daily Deals</a>
+                    <a href="#" class="hover:text-blue-600">Gift Cards</a>
+                    <a href="#" class="hover:text-blue-600">Help</a>
+                </div>
+                <div class="relative group hidden sm:block">
+                    <button class="text-lg">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-3 w-52 bg-white shadow-lg rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <a href="#" class="block text-sm py-1 hover:text-blue-600">My Orders</a>
+                        <a href="#" class="block text-sm py-1 hover:text-blue-600">Wishlist</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section
+        class="bg-gray-100 w-[30vw] h-[100vh] fixed sm:block sm:w-[20vw] overflow-y-scroll scrollbar-hide pt-3 px-4">
+        <h2 class="text-lg font-semibold mb-4">Brands</h2>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                Apple
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">iPhone 15</a>
+                <a href="#" class="block hover:text-blue-600">iPhone 14</a>
+                <a href="#" class="block hover:text-blue-600">iPhone 13</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                Samsung
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">Galaxy S24</a>
+                <a href="#" class="block hover:text-blue-600">Galaxy S23</a>
+                <a href="#" class="block hover:text-blue-600">Galaxy A Series</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                OnePlus
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">OnePlus 12</a>
+                <a href="#" class="block hover:text-blue-600">OnePlus 11</a>
+                <a href="#" class="block hover:text-blue-600">Nord Series</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                iQOO
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">iQOO 13</a>
+                <a href="#" class="block hover:text-blue-600">iQOO 12</a>
+                <a href="#" class="block hover:text-blue-600">Neo Series</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                Xiaomi
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">Xiaomi 14 Ultra</a>
+                <a href="#" class="block hover:text-blue-600">Xiaomi 14</a>
+                <a href="#" class="block hover:text-blue-600">Redmi Note Series</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                Oppo
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">Find X7 Ultra</a>
+                <a href="#" class="block hover:text-blue-600">Reno 12 Series</a>
+                <a href="#" class="block hover:text-blue-600">F Series</a>
+            </div>
+        </details>
+
+        <details class="mb-3 group">
+            <summary class="cursor-pointer font-medium py-2 flex justify-between items-center">
+                Vivo
+                <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="ml-4 mt-2 space-y-1 text-sm text-gray-600">
+                <a href="#" class="block hover:text-blue-600">X300 Pro</a>
+                <a href="#" class="block hover:text-blue-600">V30 Series</a>
+                <a href="#" class="block hover:text-blue-600">T Series</a>
+            </div>
+        </details>
+    </section>
+
+    <section class="py-2 px-4">
+        <div class="max-w-6xl ml-[30vw] grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:ml-[20vw] gap-6">
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="group relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+                <button
+                    class="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow hover:text-red-500">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-gray-100 p-6">
+                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/u/i/-original-imahgfmyczqxhtm2.jpeg?q=70"
+                        class="h-48 w-full object-contain group-hover:scale-105 transition">
+                </div>
+                <div class="p-5 space-y-3">
+                    <h3 class="text-lg font-semibold">
+                        Apple iPhone 16 (White, 128 GB)
+                    </h3>
+
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        15.49 cm (6.1 inch) Super Retina XDR Display,48MP + 12MP | 12MP Front Camera,A18 Chip, 6 Core
+                        Processor Processor,1 year warranty for phone and 1 year warranty for in Box Accessories.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="font-medium">4.2</span>
+                        <span class="text-gray-500">(14,500 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <span class="text-xl font-bold">₹68,997</span>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+                     hover:bg-blue-700 transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <a href="#"
+        class="fixed bottom-6 right-6 z-40 w-12 h-12  bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center hover: transition-all duration-300 hover:scale-110">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+</body>
+
+</html>

@@ -1,127 +1,170 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Effects – Complete Showcase</title>
-<style>
-body{font-family:Arial;padding:20px}
+  <meta charset="UTF-8">
+  <title>CSS Effects – Complete Showcase</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px
+    }
 
-.box{
-  width:160px;
-  height:100px;
-  background:#93c5fd;
-  margin:15px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid #333;
-}
+    .box {
+      width: 160px;
+      height: 100px;
+      background: #93c5fd;
+      margin: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+    }
 
-/* Shadows */
-.shadow-small{box-shadow:2px 2px 5px rgba(0,0,0,.4)}
-.shadow-large{box-shadow:10px 10px 20px rgba(0,0,0,.6)}
-.shadow-inset{box-shadow:inset 5px 5px 10px rgba(0,0,0,.4)}
+    .shadow-small {
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .4)
+    }
 
-/* Opacity */
-.opacity{opacity:.5}
+    .shadow-large {
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, .6)
+    }
 
-/* Visibility */
-.hidden{visibility:hidden}
+    .shadow-inset {
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .4)
+    }
 
-/* Filters */
-.blur{filter:blur(3px)}
-.grayscale{filter:grayscale(100%)}
-.brightness{filter:brightness(150%)}
-.contrast{filter:contrast(200%)}
-.hue{filter:hue-rotate(120deg)}
-.invert{filter:invert(100%)}
-.saturate{filter:saturate(300%)}
-.sepia{filter:sepia(100%)}
-.drop-shadow{filter:drop-shadow(6px 6px 5px black)}
+    .opacity {
+      opacity: .5
+    }
 
-/* Cursor */
-.pointer{cursor:pointer}
-.wait{cursor:wait}
-.crosshair{cursor:crosshair}
+    .hidden {
+      visibility: hidden
+    }
 
-/* Resize */
-.resize{
-  resize:both;
-  overflow:auto;
-}
+    .blur {
+      filter: blur(3px)
+    }
 
-/* User select */
-.no-select{user-select:none}
+    .grayscale {
+      filter: grayscale(100%)
+    }
 
-/* Backdrop filter */
-.backdrop{
-  background:rgba(255,255,255,.3);
-  backdrop-filter:blur(6px);
-}
+    .brightness {
+      filter: brightness(150%)
+    }
 
-/* Object fit */
-.img-box img{
-  width:150px;
-  height:100px;
-  object-fit:cover;
-}
+    .contrast {
+      filter: contrast(200%)
+    }
 
-/* Aspect ratio */
-.ratio{
-  aspect-ratio:16/9;
-  width:200px;
-  background:#34d399;
-}
-</style>
+    .hue {
+      filter: hue-rotate(120deg)
+    }
+
+    .invert {
+      filter: invert(100%)
+    }
+
+    .saturate {
+      filter: saturate(300%)
+    }
+
+    .sepia {
+      filter: sepia(100%)
+    }
+
+    .drop-shadow {
+      filter: drop-shadow(6px 6px 5px black)
+    }
+
+    .pointer {
+      cursor: pointer
+    }
+
+    .wait {
+      cursor: wait
+    }
+
+    .crosshair {
+      cursor: crosshair
+    }
+
+    .resize {
+      resize: both;
+      overflow: auto;
+    }
+
+    .no-select {
+      user-select: none
+    }
+
+    .backdrop {
+      background: rgba(255, 255, 255, .3);
+      backdrop-filter: blur(6px);
+    }
+
+    .img-box img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .ratio {
+      aspect-ratio: 16/9;
+      width: 200px;
+      background: #34d399;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS Effects – Full Reference</h1>
+  <h1>CSS Effects – Full Reference</h1>
 
-<h2>Box Shadows</h2>
-<div class="box shadow-small">small</div>
-<div class="box shadow-large">large</div>
-<div class="box shadow-inset">inset</div>
+  <h2>Box Shadows</h2>
+  <div class="box shadow-small">small</div>
+  <div class="box shadow-large">large</div>
+  <div class="box shadow-inset">inset</div>
 
-<h2>Opacity & Visibility</h2>
-<div class="box opacity">opacity</div>
-<div class="box hidden">hidden</div>
+  <h2>Opacity & Visibility</h2>
+  <div class="box opacity">opacity</div>
+  <div class="box hidden">hidden</div>
 
-<h2>Filters</h2>
-<div class="box blur">blur</div>
-<div class="box grayscale">grayscale</div>
-<div class="box brightness">brightness</div>
-<div class="box contrast">contrast</div>
-<div class="box hue">hue</div>
-<div class="box invert">invert</div>
-<div class="box saturate">saturate</div>
-<div class="box sepia">sepia</div>
-<div class="box drop-shadow">drop-shadow</div>
+  <h2>Filters</h2>
+  <div class="box blur">blur</div>
+  <div class="box grayscale">grayscale</div>
+  <div class="box brightness">brightness</div>
+  <div class="box contrast">contrast</div>
+  <div class="box hue">hue</div>
+  <div class="box invert">invert</div>
+  <div class="box saturate">saturate</div>
+  <div class="box sepia">sepia</div>
+  <div class="box drop-shadow">drop-shadow</div>
 
-<h2>Cursor</h2>
-<div class="box pointer">pointer</div>
-<div class="box wait">wait</div>
-<div class="box crosshair">crosshair</div>
+  <h2>Cursor</h2>
+  <div class="box pointer">pointer</div>
+  <div class="box wait">wait</div>
+  <div class="box crosshair">crosshair</div>
 
-<h2>Resize</h2>
-<div class="box resize">resize me</div>
+  <h2>Resize</h2>
+  <div class="box resize">resize me</div>
 
-<h2>User select</h2>
-<div class="box no-select">cannot select</div>
+  <h2>User select</h2>
+  <div class="box no-select">cannot select</div>
 
-<h2>Backdrop filter</h2>
-<div style="background:url('https://picsum.photos/400/200');padding:20px">
-  <div class="box backdrop">glass</div>
-</div>
+  <h2>Backdrop filter</h2>
+  <div style="background:url('https://picsum.photos/400/200');padding:20px">
+    <div class="box backdrop">glass</div>
+  </div>
 
-<h2>Object-fit</h2>
-<div class="img-box">
-  <img src="https://picsum.photos/300/200">
-</div>
+  <h2>Object-fit</h2>
+  <div class="img-box">
+    <img src="https://picsum.photos/300/200">
+  </div>
 
-<h2>Aspect-ratio</h2>
-<div class="ratio"></div>
+  <h2>Aspect-ratio</h2>
+  <div class="ratio"></div>
 
 </body>
+
 </html>

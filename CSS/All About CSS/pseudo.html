@@ -1,80 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Pseudo Classes & Elements – Complete Showcase</title>
-<style>
-body{font-family:Arial;padding:20px}
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 40px;
+      color: #334155;
+    }
 
-/* Links */
-a:link{color:blue}
-a:visited{color:purple}
-a:hover{color:red}
-a:active{color:green}
+    .slide {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
 
-/* Form states */
-input:focus{border:2px solid blue;outline:none}
-input:disabled{background:#ddd}
-input:checked{outline:2px solid green}
-input:required{border:2px solid orange}
+    h2 {
+      border-left: 6px solid #f59e0b;
+      padding-left: 15px;
+      color: #1e293b;
+      margin-bottom: 5px;
+    }
 
-/* Structural */
-li:first-child{color:green}
-li:last-child{color:red}
-li:nth-child(2){font-weight:bold}
-p:not(.skip){background:#fde68a}
-div:empty{height:20px;background:#fecaca}
+    h3 {
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #92400e;
+      margin: 20px 0 10px 0;
+      background: #fef3c7;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
 
-/* Root & target */
-:root{scroll-behavior:smooth}
-#target:target{background:#86efac;padding:10px}
+    .demo-area {
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+    }
 
-/* Pseudo elements */
-p::first-letter{font-size:32px}
-p::first-line{font-weight:bold}
-p::selection{background:yellow;color:black}
-li::marker{color:red}
-.box::before{content:"Before ";color:blue}
-.box::after{content:" After";color:green}
+    a:link {
+      color: #3b82f6;
+    }
 
-input::placeholder{color:gray}
-</style>
+    a:visited {
+      color: #8b5cf6;
+    }
+
+    a:hover {
+      color: #ef4444;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: #10b981;
+    }
+
+    input:focus {
+      border: 2px solid #3b82f6;
+      outline: none;
+      background: #eff6ff;
+    }
+
+    input:disabled {
+      background: #e2e8f0;
+      cursor: not-allowed;
+    }
+
+    input:required {
+      border: 2px solid #f59e0b;
+    }
+
+    li:first-child {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    li:last-child {
+      color: #ef4444;
+      font-weight: bold;
+    }
+
+    li:nth-child(2) {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+
+    p:not(.skip) {
+      background: #fef3c7;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    .p-el::first-letter {
+      font-size: 50px;
+      color: #3b82f6;
+      float: left;
+      line-height: 1;
+      margin-right: 8px;
+    }
+
+    .p-el::first-line {
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    .p-el::selection {
+      background: #fde047;
+      color: #000;
+    }
+
+    .marker-list li::marker {
+      color: #f59e0b;
+      font-size: 1.2rem;
+    }
+
+    .box::before {
+      content: "START: ";
+      color: #3b82f6;
+      font-weight: bold;
+    }
+
+    .box::after {
+      content: " :END";
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    input::placeholder {
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .gap {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 300px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Pseudo Classes & Elements – Full Reference</h1>
+  <h1>Pseudo Classes & Elements</h1>
 
-<h2>Link states</h2>
-<a href="#target">Test link</a>
+  <div class="slide">
+    <h2>1. User Action & Link States</h2>
+    <h3>:link / :visited / :hover / :active</h3>
+    <div class="demo-area">
+      <a href="#">Hover, click, or visit this link</a>
+    </div>
 
-<h2>Form states</h2>
-<input placeholder="Focus me"><br><br>
-<input disabled placeholder="Disabled"><br><br>
-<input type="checkbox" checked> Checked<br><br>
-<input required placeholder="Required">
+    <h3>:focus { input:focus; }</h3>
+    <div class="demo-area">
+      <input type="text" placeholder="Click to see :focus">
+    </div>
+  </div>
 
-<h2>Structural pseudo-classes</h2>
-<ul>
-  <li>First</li>
-  <li>Second</li>
-  <li>Last</li>
-</ul>
+  <div class="slide">
+    <h2>2. Child & Input States</h2>
+    <h3>:first-child / :nth-child(2) / :last-child</h3>
+    <div class="demo-area">
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Last Item</li>
+      </ul>
+    </div>
 
-<p>Styled by :not()</p>
-<p class="skip">Skipped</p>
+    <h3>:required / :disabled</h3>
+    <div class="demo-area gap">
+      <input type="text" required placeholder="Required Field">
+      <input type="text" disabled placeholder="Disabled Field">
+    </div>
+  </div>
 
-<div></div>
+  <div class="slide">
+    <h2>3. Filtering Logic</h2>
+    <h3>:not(.class) { p:not(.skip); }</h3>
+    <div class="demo-area">
+      <p>I am styled because I don't have the class.</p>
+      <p class="skip">I am NOT styled (class="skip").</p>
+    </div>
+  </div>
 
-<h2>:target</h2>
-<a href="#target">Go to target</a>
-<div style="height:300px"></div>
-<div id="target">Target element</div>
+  <div class="slide">
+    <h2>4.Pseudo-Elements</h2>
+    <h3>::first-letter / ::first-line</h3>
+    <div class="demo-area">
+      <p class="p-el">This is a demo paragraph. The first letter is large (drop cap) and the first line is bold.
+        Highlight this text with your mouse to see the <b>::selection</b> effect in action!</p>
+    </div>
 
-<h2>Pseudo-elements</h2>
-<p>This paragraph demonstrates pseudo elements.</p>
+    <h3>::before / ::after</h3>
+    <div class="demo-area">
+      <div class="box">Middle Content</div>
+    </div>
 
-<div class="box">Content</div>
+    <h3>::marker { li::marker; }</h3>
+    <div class="demo-area">
+      <ul class="marker-list">
+        <li>Custom marker color</li>
+        <li>Custom marker size</li>
+      </ul>
+    </div>
+  </div>
 
 </body>
+
 </html>

@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Combinators – Full Showcase</title>
+  <meta charset="UTF-8">
+  <title>CSS Combinators – Full Showcase</title>
 
-<style>
-.box{border:2px solid #333;padding:10px;margin:10px;}
+  <style>
+    .box {
+      border: 2px solid #333;
+      padding: 10px;
+      margin: 10px;
+    }
 
-div p{color:blue;}
-div > span{color:red;}
-h2 + p{background:#fde68a;}
-h3 ~ p{font-style:italic;}
-</style>
+    div p {
+      color: blue;
+    }
+
+    div>span {
+      color: red;
+    }
+
+    h2+p {
+      background: #fde68a;
+    }
+
+    h3~p {
+      font-style: italic;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS Combinators</h1>
+  <h1>CSS Combinators</h1>
 
-<section>
-<h2>Descendant selector (space)</h2>
-<div class="box">
-  <p>This paragraph is inside div → blue</p>
   <section>
-    <p>This is also descendant → blue</p>
+    <h2>Descendant selector (space)</h2>
+    <div class="box">
+      <p>This paragraph is inside div → blue</p>
+      <section>
+        <p>This is also descendant → blue</p>
+      </section>
+    </div>
   </section>
-</div>
-</section>
 
-<section>
-<h2>Child selector (>)</h2>
-<div class="box">
-  <span>Direct child → red</span>
-  <p>
-    <span>Not direct child → default</span>
-  </p>
-</div>
-</section>
+  <section>
+    <h2>Child selector (>)</h2>
+    <div class="box">
+      <span>Direct child → red</span>
+      <p>
+        <span>Not direct child → default</span>
+      </p>
+    </div>
+  </section>
 
-<section>
-<h2>Adjacent sibling (+)</h2>
-<h2>Heading</h2>
-<p>This is styled</p>
-<p>This is not</p>
-</section>
+  <section>
+    <h2>Adjacent sibling (+)</h2>
+    <h2>Heading</h2>
+    <p>This is styled</p>
+    <p>This is not</p>
+  </section>
 
-<section>
-<h2>General sibling (~)</h2>
-<h3>Title</h3>
-<p>Italic</p>
-<p>Italic</p>
-<p>Italic</p>
-</section>
+  <section>
+    <h2>General sibling (~)</h2>
+    <h3>Title</h3>
+    <p>Italic</p>
+    <p>Italic</p>
+    <p>Italic</p>
+  </section>
 
 </body>
+
 </html>

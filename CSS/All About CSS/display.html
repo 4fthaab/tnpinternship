@@ -3,145 +3,232 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CSS Display – Complete Showcase</title>
-
   <style>
     body {
-      font-family: Arial;
-      padding: 20px
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 40px;
+      color: #334155;
     }
 
-    section {
-      margin-bottom: 40px
+    .slide {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      border-left: 6px solid #8b5cf6;
+      padding-left: 15px;
+      color: #1e293b;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #475569;
+      margin: 20px 0 10px 0;
+      background: #f3e8ff;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .container {
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 8px;
     }
 
     .box {
-      background: #93c5fd;
+      background: #3b82f6;
+      color: white;
       padding: 10px;
-      margin: 5px;
-      border: 1px solid #333;
+      font-weight: bold;
+      border-radius: 4px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    /* Display Classes */
     .inline {
-      display: inline
+      display: inline;
     }
 
     .block {
-      display: block
+      display: block;
     }
 
     .inline-block {
       display: inline-block;
-      width: 120px
+      width: 120px;
     }
 
     .none {
-      display: none
+      display: none;
     }
 
     .contents {
-      display: contents
+      display: contents;
     }
 
     .flex {
       display: flex;
-      gap: 10px
+      gap: 10px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px
+      gap: 10px;
     }
 
+    /* Table Classes */
     .table {
       display: table;
-      border: 2px solid black
+      width: 100%;
+      border-collapse: collapse;
     }
 
     .table-row {
-      display: table-row
+      display: table-row;
     }
 
     .table-cell {
       display: table-cell;
-      border: 1px solid black;
-      padding: 5px
+      border: 1px solid #cbd5e1;
+      padding: 10px;
+      background: #fff;
     }
 
+    /* Visibility Class */
     .hidden {
-      visibility: hidden
+      visibility: hidden;
+    }
+
+    /* Wrapping Demo - Fixed width to force the wrap */
+    .wrap-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 250px;
+      gap: 10px;
+      border: 2px dashed #8b5cf6;
+      padding: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>CSS display property – All major values</h1>
+  <h1>CSS Display & Visibility Reference</h1>
 
-  <section>
-    <h2>display: inline</h2>
-    <div class="box inline">inline 1</div>
-    <div class="box inline">inline 2</div>
-  </section>
-
-  <section>
-    <h2>display: block</h2>
-    <div class="box block">block</div>
-  </section>
-
-  <section>
-    <h2>display: inline-block</h2>
-    <div class="box inline-block">box</div>
-    <div class="box inline-block">box</div>
-  </section>
-
-  <section>
-    <h2>display: none</h2>
-    <div class="box none">not visible</div>
-    <p>Element removed from layout</p>
-  </section>
-
-  <section>
-    <h2>display: contents</h2>
-    <div class="box contents">
-      <span>child 1</span>
-      <span>child 2</span>
+  <div class="slide">
+    <h2>1. Basic Flow</h2>
+    <h3>inline { display: inline; }</h3>
+    <div class="container">
+      <div class="box inline">Item 1</div>
+      <div class="box inline">Item 2</div>
+      <span>(Flows like text)</span>
     </div>
-  </section>
 
-  <section>
-    <h2>display: flex</h2>
-    <div class="flex box">
+    <h3>block { display: block; }</h3>
+    <div class="container">
+      <div class="box block">Item 1</div>
+      <div class="box block" style="margin-top:5px;">Item 2</div>
+    </div>
+
+    <h3>inline-block { display: inline-block; }</h3>
+    <div class="container">
+      <div class="box inline-block">Width: 120px</div>
+      <div class="box inline-block">I sit side-by-side</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>2. Modern Layouts</h2>
+    <h3>flex { display: flex; }</h3>
+    <div class="container flex">
       <div class="box">A</div>
       <div class="box">B</div>
+      <div class="box">C</div>
     </div>
-  </section>
 
-  <section>
-    <h2>display: grid</h2>
-    <div class="grid">
+    <h3>grid { display: grid; }</h3>
+    <div class="container grid">
       <div class="box">1</div>
       <div class="box">2</div>
       <div class="box">3</div>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>display: table</h2>
+  <div class="slide">
+    <h2>4. flex-wrap</h2>
+
+    <h3>wrap { flex-wrap: wrap; }</h3>
+    <div class="container" style="display: flex; flex-wrap: wrap; width: 200px; height: auto; gap: 10px;">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+
+    <h3>wrap-reverse { flex-wrap: wrap-reverse; }</h3>
+    <div class="container"
+      style="display: flex; flex-wrap: wrap-reverse; width: 200px; height: auto; gap: 10px; margin-top: 50px;">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>4. Specialized Displays</h2>
+    <h3>table { display: table; }</h3>
     <div class="table">
       <div class="table-row">
-        <div class="table-cell">A</div>
-        <div class="table-cell">B</div>
+        <div class="table-cell">Cell A</div>
+        <div class="table-cell">Cell B</div>
+        <div class="table-cell">Cell C</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Cell D</div>
+        <div class="table-cell">Cell E</div>
+        <div class="table-cell">Cell F</div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>visibility: hidden vs display:none</h2>
-    <div class="box hidden">Hidden but space remains</div>
-    <div class="box">Next element</div>
-  </section>
+    <h3>contents { display: contents; }</h3>
+    <div class="container" style="background: #fee2e2; border-color: #ef4444;">
+      <div class="contents" style="background: yellow; border: 5px solid black;">
+        <div class="box">Container is ignored</div>
+        <div class="box">Layout skips to children</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>5. Removal vs. Hiding</h2>
+    <h3>none { display: none; }</h3>
+    <div class="container">
+      <div class="box none">Hidden</div>
+      <p>Element is completely gone from the flow.</p>
+    </div>
+
+    <h3>hidden { visibility: hidden; }</h3>
+    <div class="container">
+      <div class="box hidden">Invisible</div>
+      <p>^ Space is still reserved above.</p>
+    </div>
+  </div>
 
 </body>
 

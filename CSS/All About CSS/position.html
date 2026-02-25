@@ -1,70 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Position – Complete Showcase</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      padding: 50px;
+      line-height: 1.6;
+    }
 
-<style>
-body{font-family:Arial;padding:20px}
+    h2 {
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #1e293b;
+    }
 
-.container{
-  position:relative;
-  height:200px;
-  border:2px dashed gray;
-  margin-bottom:40px;
-}
+    .container {
+      position: relative;
+      height: 180px;
+      border: 3px dashed #cbd5e1;
+      background: #f8fafc;
+      border-radius: 8px;
+    }
 
-.box{
-  width:120px;
-  padding:10px;
-  border:1px solid black;
-  background:#86efac;
-}
+    .box {
+      width: 140px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 6px;
+      color: white;
+    }
 
-.static{position:static}
-.relative{position:relative;top:20px;left:20px}
-.absolute{position:absolute;top:20px;right:20px}
-.fixed{position:fixed;bottom:10px;right:10px;background:#fca5a5}
-.sticky{position:sticky;top:0;background:#fde047;padding:10px}
+    .static {
+      position: static;
+      background: #64748b;
+    }
 
-.z1{position:absolute;top:40px;left:40px;background:#93c5fd;z-index:1}
-.z10{position:absolute;top:60px;left:60px;background:#fca5a5;z-index:10}
-.zminus{position:absolute;top:80px;left:80px;background:#bbf7d0;z-index:-1}
-</style>
+    .relative {
+      position: relative;
+      top: 30px;
+      left: 30px;
+      background: #3b82f6;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ef4444;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #8b5cf6;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .sticky {
+      position: sticky;
+      top: 10px;
+      background: #f59e0b;
+      width: 100%;
+      margin-bottom: 20px;
+      z-index: 50;
+    }
+
+    .z-card {
+      position: absolute;
+      width: 120px;
+      height: 80px;
+      border: 2px solid #fff;
+    }
+
+    .z1 {
+      top: 30px;
+      left: 30px;
+      background: #3b82f6;
+      z-index: 1;
+    }
+
+    .z10 {
+      top: 50px;
+      left: 60px;
+      background: #ef4444;
+      z-index: 10;
+    }
+
+    .z-neg {
+      top: 70px;
+      left: 90px;
+      background: #10b981;
+      z-index: -1;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS position property – All values</h1>
+  <div class="box fixed">Fixed Utility</div>
 
-<h2>position: static</h2>
-<div class="container">
-  <div class="box static">static</div>
-</div>
+  <div class="slide">
+    <h2>1. position: static</h2>
+    <div class="container">
+      <div class="box static">Static</div>
+    </div>
+  </div>
 
-<h2>position: relative</h2>
-<div class="container">
-  <div class="box relative">relative</div>
-</div>
+  <div class="slide">
+    <h2>2. position: relative</h2>
+    <div class="container">
+      <div class="box relative">Relative (+30px)</div>
+    </div>
+  </div>
 
-<h2>position: absolute</h2>
-<div class="container">
-  <div class="box absolute">absolute</div>
-</div>
+  <div class="slide">
+    <h2>3. position: absolute</h2>
+    <div class="container">
+      <div class="box absolute">Absolute (Top/Right)</div>
+    </div>
+  </div>
 
-<h2>position: sticky</h2>
-<div class="sticky">Sticky header</div>
-<p style="height:600px">Scroll to see sticky effect</p>
+  <div class="slide" style="height: 400px; overflow: auto;">
+    <h2>4. position: sticky</h2>
+    <div class="box sticky">Sticky Header</div>
+    <p>Scroll inside this card...</p>
+    <div style="height: 500px; background: linear-gradient(#eee, #fff);"></div>
+  </div>
 
-<h2>position: fixed</h2>
-<div class="box fixed">fixed</div>
-
-<h2>z-index stacking</h2>
-<div class="container">
-  <div class="box z1">z-index 1</div>
-  <div class="box z10">z-index 10</div>
-  <div class="box zminus">z-index -1</div>
-</div>
+  <div class="slide">
+    <h2>5. Z-Index Stacking</h2>
+    <div class="container">
+      <div class="box z-card z1">Z: 1</div>
+      <div class="box z-card z10">Z: 10</div>
+      <div class="box z-card z-neg">Z: -1</div>
+    </div>
+  </div>
 
 </body>
+
 </html>

@@ -1,120 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Tables – Complete Showcase</title>
+  <meta charset="UTF-8">
+  <title>CSS Tables – Complete Showcase</title>
 
-<style>
-body{font-family:Arial;padding:20px;}
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-bottom:40px;
-}
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
 
-th,td{
-  border:1px solid #333;
-  padding:10px;
-  text-align:center;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
 
-caption{
-  caption-side:top;
-  font-weight:bold;
-  margin-bottom:10px;
-}
+    th,
+    td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
 
-.striped tr:nth-child(even){background:#e5e7eb;}
-.hover tr:hover{background:#fde68a;}
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.spacing{
-  border-collapse:separate;
-  border-spacing:10px;
-}
+    .striped tr:nth-child(even) {
+      background: #e5e7eb;
+    }
 
-.empty-hide{
-  empty-cells:hide;
-}
+    .hover tr:hover {
+      background: #fde68a;
+    }
 
-.fixed{
-  table-layout:fixed;
-}
+    .spacing {
+      border-collapse: separate;
+      border-spacing: 10px;
+    }
 
-thead.sticky{
-  position:sticky;
-  top:0;
-  background:#2563eb;
-  color:white;
-}
-</style>
+    .empty-hide {
+      empty-cells: hide;
+    }
+
+    .fixed {
+      table-layout: fixed;
+    }
+
+    thead.sticky {
+      position: sticky;
+      top: 0;
+      background: #2563eb;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CSS Tables – Full Reference</h1>
+  <h1>CSS Tables – Full Reference</h1>
 
-<h2>Basic table</h2>
-<table>
-<caption>Basic</caption>
-<tr><th>Name</th><th>Role</th></tr>
-<tr><td>Alice</td><td>Dev</td></tr>
-<tr><td>Bob</td><td>Design</td></tr>
-</table>
+  <h2>Basic table</h2>
+  <table>
+    <caption>Basic</caption>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>Dev</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Design</td>
+    </tr>
+  </table>
 
-<h2>Zebra striping</h2>
-<table class="striped">
-<caption>nth-child</caption>
-<tr><th>Name</th><th>Role</th></tr>
-<tr><td>Alice</td><td>Dev</td></tr>
-<tr><td>Bob</td><td>Design</td></tr>
-<tr><td>John</td><td>Tester</td></tr>
-</table>
+  <h2>Zebra striping</h2>
+  <table class="striped">
+    <caption>nth-child</caption>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>Dev</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Design</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Tester</td>
+    </tr>
+  </table>
 
-<h2>Hover rows</h2>
-<table class="hover">
-<caption>Hover</caption>
-<tr><th>Name</th><th>Role</th></tr>
-<tr><td>Alice</td><td>Dev</td></tr>
-<tr><td>Bob</td><td>Design</td></tr>
-</table>
+  <h2>Hover rows</h2>
+  <table class="hover">
+    <caption>Hover</caption>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>Dev</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Design</td>
+    </tr>
+  </table>
 
-<h2>Border spacing</h2>
-<table class="spacing">
-<caption>border-spacing</caption>
-<tr><td>A</td><td>B</td></tr>
-<tr><td>C</td><td>D</td></tr>
-</table>
+  <h2>Border spacing</h2>
+  <table class="spacing">
+    <caption>border-spacing</caption>
+    <tr>
+      <td>A</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>D</td>
+    </tr>
+  </table>
 
-<h2>Empty cells hidden</h2>
-<table class="empty-hide">
-<caption>empty-cells</caption>
-<tr><td>Data</td><td></td></tr>
-</table>
+  <h2>Empty cells hidden</h2>
+  <table class="empty-hide">
+    <caption>empty-cells</caption>
+    <tr>
+      <td>Data</td>
+      <td></td>
+    </tr>
+  </table>
 
-<h2>Fixed layout</h2>
-<table class="fixed">
-<caption>table-layout: fixed</caption>
-<tr>
-<td style="width:50px;">Short</td>
-<td>Very very very very long text that will wrap</td>
-</tr>
-</table>
+  <h2>Fixed layout</h2>
+  <table class="fixed">
+    <caption>table-layout: fixed</caption>
+    <tr>
+      <td style="width:50px;">Short</td>
+      <td>Very very very very long text that will wrap</td>
+    </tr>
+  </table>
 
-<h2>Sticky header</h2>
-<div style="height:150px;overflow:auto;">
-<table>
-<thead class="sticky">
-<tr><th>Name</th><th>Role</th></tr>
-</thead>
-<tbody>
-<tr><td>A</td><td>Dev</td></tr>
-<tr><td>B</td><td>Design</td></tr>
-<tr><td>C</td><td>QA</td></tr>
-<tr><td>D</td><td>Admin</td></tr>
-<tr><td>E</td><td>HR</td></tr>
-</tbody>
-</table>
-</div>
+  <h2>Sticky header</h2>
+  <div style="height:150px;overflow:auto;">
+    <table>
+      <thead class="sticky">
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>Dev</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>Design</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>QA</td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>Admin</td>
+        </tr>
+        <tr>
+          <td>E</td>
+          <td>HR</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </body>
+
 </html>

@@ -1,118 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>CSS Flexbox – Complete Showcase</title>
-<style>
-body{font-family:Arial;padding:20px}
-section{margin-bottom:40px}
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 40px;
+      color: #334155;
+    }
 
-.container{
-  display:flex;
-  border:2px solid black;
-  padding:10px;
-  margin-top:10px;
-  height:120px;
-}
+    .slide {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
 
-.box{
-  background:#93c5fd;
-  padding:10px;
-  margin:5px;
-  width:60px;
-  text-align:center;
-}
+    h2 {
+      border-left: 6px solid #3b82f6;
+      padding-left: 15px;
+      color: #1e293b;
+      margin-bottom: 25px;
+    }
 
-/* justify-content */
-.jc-start{justify-content:flex-start}
-.jc-center{justify-content:center}
-.jc-end{justify-content:flex-end}
-.jc-between{justify-content:space-between}
-.jc-around{justify-content:space-around}
-.jc-evenly{justify-content:space-evenly}
+    h3 {
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #475569;
+      margin: 20px 0 10px 0;
+      background: #e2e8f0;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
 
-/* align-items */
-.ai-start{align-items:flex-start}
-.ai-center{align-items:center}
-.ai-end{align-items:flex-end}
-.ai-stretch{align-items:stretch}
-.ai-baseline{align-items:baseline}
+    .container {
+      display: flex;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      padding: 10px;
+      height: 100px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
 
-/* direction */
-.row{flex-direction:row}
-.column{flex-direction:column}
-.row-rev{flex-direction:row-reverse}
+    .box {
+      background: #3b82f6;
+      color: white;
+      padding: 10px;
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-/* wrap */
-.wrap{flex-wrap:wrap}
-.nowrap{flex-wrap:nowrap}
+    .jc-start {
+      justify-content: flex-start;
+    }
 
-/* gap */
-.gap{gap:20px}
+    .jc-end {
+      justify-content: flex-end;
+    }
 
-/* items */
-.order2{order:2}
-.grow1{flex-grow:1}
-.grow2{flex-grow:2}
-.shrink0{flex-shrink:0}
-.basis{flex-basis:120px}
-.self-end{align-self:flex-end}
-</style>
+    .jc-center {
+      justify-content: center;
+    }
+
+    .jc-between {
+      justify-content: space-between;
+    }
+
+    .jc-around {
+      justify-content: space-around;
+    }
+
+    .jc-evenly {
+      justify-content: space-evenly;
+    }
+
+    .ai-start {
+      align-items: flex-start;
+    }
+
+    .ai-end {
+      align-items: flex-end;
+    }
+
+    .ai-center {
+      align-items: center;
+    }
+
+    .ai-stretch {
+      align-items: stretch;
+    }
+
+    .ai-baseline {
+      align-items: baseline;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .row-rev {
+      flex-direction: row-reverse;
+    }
+
+    .column {
+      flex-direction: column;
+      height: auto;
+      min-height: 200px;
+    }
+
+    .column-rev {
+      flex-direction: column-reverse;
+      height: auto;
+      min-height: 200px;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 10px;
+      width: 300px;
+    }
+
+    /* Forced width to show wrap */
+    .wrap-rev {
+      flex-wrap: wrap-reverse;
+      height: auto;
+      gap: 10px;
+      width: 300px;
+    }
+
+    .grow1 {
+      flex-grow: 1;
+      background: #10b981;
+    }
+
+    .grow2 {
+      flex-grow: 2;
+      background: #f59e0b;
+    }
+
+    .shrink0 {
+      flex-shrink: 0;
+      width: 250px;
+      background: #6366f1;
+    }
+
+    .self-start {
+      align-self: flex-start;
+      background: #da1717;
+    }
+
+    .self-end {
+      align-self: flex-end;
+      background: #ef4444;
+    }
+
+    .order-neg {
+      order: -1;
+      background: #06b6d4;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Flexbox – Complete Reference</h1>
+  <h1>Flexbox Reference Guide</h1>
 
-<section>
-<h2>justify-content</h2>
-<div class="container jc-start"><div class="box">A</div><div class="box">B</div></div>
-<div class="container jc-center"><div class="box">A</div><div class="box">B</div></div>
-<div class="container jc-end"><div class="box">A</div><div class="box">B</div></div>
-<div class="container jc-between"><div class="box">A</div><div class="box">B</div></div>
-<div class="container jc-around"><div class="box">A</div><div class="box">B</div></div>
-<div class="container jc-evenly"><div class="box">A</div><div class="box">B</div></div>
-</section>
+  <div class="slide">
+    <h2>1. justify-content (Main Axis)</h2>
+    <h3>flex-start { justify-content: flex-start; }</h3>
+    <div class="container jc-start">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
 
-<section>
-<h2>align-items</h2>
-<div class="container ai-start"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
-<div class="container ai-center"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
-<div class="container ai-end"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
-<div class="container ai-baseline"><div class="box">A</div><div class="box" style="font-size:30px">B</div></div>
-</section>
+    <h3>flex-end { justify-content: flex-end; }</h3>
+    <div class="container jc-end">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
 
-<section>
-<h2>flex-direction</h2>
-<div class="container row"><div class="box">1</div><div class="box">2</div></div>
-<div class="container column"><div class="box">1</div><div class="box">2</div></div>
-<div class="container row-rev"><div class="box">1</div><div class="box">2</div></div>
-</section>
+    <h3>center { justify-content: center; }</h3>
+    <div class="container jc-center">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
 
-<section>
-<h2>flex-wrap & gap</h2>
-<div class="container wrap gap">
-  <div class="box">1</div><div class="box">2</div><div class="box">3</div><div class="box">4</div>
-</div>
-</section>
+    <h3>space-between { justify-content: space-between; }</h3>
+    <div class="container jc-between">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
 
-<section>
-<h2>Flex items</h2>
-<div class="container">
-  <div class="box order2">order 2</div>
-  <div class="box">order 0</div>
-</div>
+    <h3>space-around { justify-content: space-around; }</h3>
+    <div class="container jc-around">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
 
-<div class="container">
-  <div class="box grow1">grow 1</div>
-  <div class="box grow2">grow 2</div>
-</div>
+    <h3>space-evenly { justify-content: space-evenly; }</h3>
+    <div class="container jc-evenly">
+      <div class="box">A</div>
+      <div class="box">B</div>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="box basis">basis 120px</div>
-  <div class="box self-end">self-end</div>
-</div>
-</section>
+  <div class="slide">
+    <h2>2. align-items (Cross Axis)</h2>
+    <h3>flex-start { align-items: flex-start; }</h3>
+    <div class="container ai-start">
+      <div class="box">Small</div>
+      <div class="box" style="height:70px">Tall</div>
+    </div>
+
+    <h3>flex-end { align-items: flex-end; }</h3>
+    <div class="container ai-end">
+      <div class="box">Small</div>
+      <div class="box" style="height:70px">Tall</div>
+    </div>
+
+    <h3>center { align-items: center; }</h3>
+    <div class="container ai-center">
+      <div class="box">Small</div>
+      <div class="box" style="height:70px">Tall</div>
+    </div>
+
+    <h3>stretch { align-items: stretch; }</h3>
+    <div class="container ai-stretch">
+      <div class="box">Fill</div>
+      <div class="box">Fill</div>
+    </div>
+
+    <h3>baseline { align-items: baseline; }</h3>
+    <div class="container ai-baseline">
+      <div class="box" style="padding-top:20px; font-size:24px">T</div>
+      <div class="box">t</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>3. flex-direction</h2>
+    <h3>row { flex-direction: row; }</h3>
+    <div class="container row">
+      <div class="box">1</div>
+      <div class="box">2</div>
+    </div>
+
+    <h3>row-reverse { flex-direction: row-reverse; }</h3>
+    <div class="container row-rev">
+      <div class="box">1</div>
+      <div class="box">2</div>
+    </div>
+
+    <h3>column { flex-direction: column; }</h3>
+    <div class="container column">
+      <div class="box">1</div>
+      <div class="box">2</div>
+    </div>
+
+    <h3>column-reverse { flex-direction: column-reverse; }</h3>
+    <div class="container column-rev">
+      <div class="box">1</div>
+      <div class="box">2</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>4. flex-wrap</h2>
+    <h3>nowrap { flex-wrap: nowrap; }</h3>
+    <div class="container" style="width:200px;">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+
+    <h3>wrap { flex-wrap: wrap; }</h3>
+    <div class="container wrap">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+
+    <h3>wrap-reverse { flex-wrap: wrap-reverse; }</h3>
+    <div class="container wrap-rev">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <h2>5. Flex Item Properties</h2>
+    <h3>flex-grow { flex-grow: 1 or 2; }</h3>
+    <div class="container">
+      <div class="box grow1">Grow 1</div>
+      <div class="box grow2">Grow 2</div>
+    </div>
+
+    <h3>flex-shrink { flex-shrink: 0; }</h3>
+    <div class="container" style="width:200px;">
+      <div class="box shrink0">I won't shrink</div>
+      <div class="box">I will</div>
+    </div>
+    \
+    <h3>order { order: -1; }</h3>
+    <div class="container">
+      <div class="box">First</div>
+      <div class="box order-neg">Second</div>
+    </div>
+
+    <h3>align-self { align-self: flex-start; }</h3>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box self-start">B</div>
+    </div>
+
+    <h3>align-self { align-self: flex-end; }</h3>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box self-end">B</div>
+    </div>
+  </div>
 
 </body>
+
 </html>
